@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Feliz Cumpleaños!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #bbf7f7, #c4e6fa);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .banner {
+      background-color: #6fffff;
+      color: rgb(36, 58, 90);
+      padding: 1.5rem 2rem;
+      border-radius: 15px;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 800;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .ending {
+      margin-top: 20px
+    }
+
+    .card {
+      background: #2c5369;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      color: #19d5db;
+      margin-bottom: 1rem;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #fbffff;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .btn {
+      background-color: #27a780;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #4ee4ff;
+    }
+
+    .confetti {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .confetti-piece {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: hsl(var(--hue), 70%, 60%);
+      opacity: 0.8;
+      border-radius: 50%;
+      animation: fall 3s linear infinite;
+    }
+
+    @keyframes fall {
+      from { transform: translateY(-100vh) rotate(0deg); }
+      to { transform: translateY(100vh) rotate(360deg); }
+    }
+
+    .image {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 15px;
+      margin: 1rem auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">¡Feliz Cumpleaños, Pirata! 🏴‍☠️🎉</div>
+
+  <div class="container">
+
+    <div class="card">
+      <h1>¡Feliz Cumpleaños Corazón!</h1>
+      <p>Que este nuevo año de vida esté lleno de alegría, amor y momentos inolvidables. ¡Te lo mereces!</p>
+      <button class="btn" onclick="launchConfetti()">Haz clic para celebrar 🎉</button>
+    </div>
+
+    <div class="card">
+      <h1>😅 ¡Lo siento mucho!</h1>
+      <p>Sé que lo olvidé, pero más vale tarde que nunca. Me podré olvidar de tu cumple pero nunca de lo increible que eres 🎂 <br>
+        Y siempre estarás en mi cocoro ❤️ Tqm.
+      </p>
+      <button class="btn" onclick="launchConfetti()">¡Perdóname y celebra conmigo! 🥳</button>
+    </div>
+
+    <div class="card">
+      <h1>🏴‍☠️ ¡Aventura al estilo One Piece!</h1>
+      <p>¡Que tu año esté lleno de aventuras tan emocionantes como las de Luffy y su tripulación! ¡Nunca dejes de perseguir tus sueños! 🌊</p>
+      <button class="btn" onclick="launchConfetti()">¡Zarpa hacia la celebración! 🚢</button>
+    </div>
+
+    <div class="card">
+      <h1>🏍️ ¡Ruge el motor de la vida!</h1>
+      <p>Que este nuevo año sea tan rápido, emocionante y lleno de adrenalina como un paseo en tu moto favorita. ¡Aceleremos a nuevas aventuras! 🏎️</p>
+      <button class="btn" onclick="launchConfetti()">¡A toda velocidad hacia la fiesta! 🚀</button>
+    </div>
+
+    <div class="card">
+      <h1>🔥 ¡Luffy te desea un gran cumpleaños!</h1>
+      <img src="imagenes/lufyhb.jpg" alt="Luffy de One Piece sonriendo" class="image">
+      <p>¡Sigue persiguiendo tus sueños con la misma determinación que Luffy! ¡Este año será una gran aventura! 🏴‍☠️✨</p>
+      <button class="btn" onclick="launchConfetti()">¡Vamos por el One Piece! 🏆</button>
+    </div>
+
+    <div class="card">
+      <h1>💻 Código, café y cumpleaños ☕</h1>
+      <p>¡Espero que este año esté lleno de líneas de código limpias y momentos sin bugs! ¡Hoy tu único commit debe ser divertirte! 🖥️🎉</p>
+      <button class="btn" onclick="launchConfetti()">¡Debugueemos la diversión! 💥</button>
+    </div>
+  </div>
+
+  <div class="ending">
+    <div class="banner">Con mucho amor para el mejor Ingeniero de Software ❤️</div>
+  </div> 
+  
+  <div class="confetti" id="confetti-container"></div>
+
+  <script>
+    function launchConfetti() {
+      const container = document.getElementById('confetti-container');
+      container.innerHTML = '';
+
+      for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti-piece');
+        confetti.style.setProperty('--hue', Math.floor(Math.random() * 360));
+        confetti.style.left = Math.random() * 100 + '%';
+        confetti.style.animationDelay = Math.random() * 2 + 's';
+        container.appendChild(confetti);
+      }
+    }
+  </script>
+</body>
+</html>
